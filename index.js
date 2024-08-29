@@ -10,6 +10,7 @@ function resort() {
     
     // Step 3: Move the last div to the top
     if(divs[0].children[3].getAttribute('data-queue-id')==400){
+        
         const lastDiv = divs[divs.length - 1]; // Get the last div
         container.removeChild(lastDiv); // Remove it from its current position
         container.insertBefore(lastDiv, container.firstChild); // Insert it at the top
@@ -18,16 +19,14 @@ function resort() {
     
     
 }
-let addDodgeAndExitButtonObserver = (mutations) => {
+let initiateResort = (mutations) => {
 	if (document.querySelector(".parties-game-type-card-category-div")){
 		resort()
 	}
 }
 
-
 window.addEventListener('load', () => {
-	utils.routineAddCallback(addDodgeAndExitButtonObserver, ["bottom-right-buttons"])
-	utils.addCss("//plugins/dodge_button/assets/dodge_button.css")
+	utils.routineAddCallback(initiateResort, ["parties-game-type-card-categories"])
 })
 
 
