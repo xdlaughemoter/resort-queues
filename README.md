@@ -1,5 +1,6 @@
 # resort-queues
-Simple plugin for penguloader to resort classic queues to original order
+Simple plugin for penguloader to resort classic queues to original order.
+Does not select quickplay on default because i dont know how to change that, but i assume nobody plays it anyways so i wont bother with it
 
 
 ![image](https://github.com/user-attachments/assets/e0ad14fb-9966-4e39-9116-61990c8ffee4)
