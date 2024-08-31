@@ -1,6 +1,3 @@
-import utils from "./_utils";
-
-
 function resort() {
     // Step 1: Select the container
     const container = document.querySelector('.parties-game-type-card-categories');
@@ -26,7 +23,9 @@ let initiateResort = (mutations) => {
 }
 
 window.addEventListener('load', () => {
-	utils.routineAddCallback(initiateResort, ["parties-game-type-card-categories"])
+    window.setInterval(() => {
+		initiateResort()
+	}, 100)
 })
 
 
